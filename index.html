@@ -1,0 +1,259 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tigo Pesa | Mikopo ya Papo kwa Papo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --tigo-blue: #003366;
+      --tigo-yellow: #f1c40f;
+      --tigo-dark: #001f3f;
+      --tigo-accent: #004a99;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f0f4f8;
+      overflow-x: hidden;
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+      background: white !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 12px 0;
+    }
+
+    .navbar-brand img {
+      height: 45px;
+      margin-right: 12px;
+    }
+
+    /* --- Animated Hero Section --- */
+    .hero-section {
+      background: linear-gradient(135deg, var(--tigo-blue) 0%, var(--tigo-dark) 100%);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated Falling Money Background */
+    .hero-section::after {
+      content: "\f0d6";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      top: -50px;
+      font-size: 30px;
+      color: var(--tigo-yellow);
+      opacity: 0.2;
+      animation: moneyFall 5s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moneyFall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        left: 10%;
+      }
+
+      100% {
+        transform: translateY(600px) rotate(360deg);
+        left: 90%;
+      }
+    }
+
+    .hero-logo {
+      height: 100px;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* --- Buttons --- */
+    .btn-tigo-yellow {
+      background-color: var(--tigo-yellow);
+      color: var(--tigo-blue);
+      font-weight: 800;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-tigo-yellow:hover {
+      background-color: #e2b70d;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(241, 196, 15, 0.4);
+    }
+
+    /* --- Loan Cards --- */
+    .loan-card {
+      background: white;
+      border: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border-bottom: 5px solid transparent;
+    }
+
+    .loan-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15) !important;
+      border-bottom: 5px solid var(--tigo-yellow);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      color: var(--tigo-blue);
+      margin-bottom: 20px;
+    }
+
+    .price-tag {
+      background: var(--tigo-blue);
+      color: white;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background-color: var(--tigo-dark);
+      color: white;
+      padding: 60px 0 20px;
+    }
+
+    .footer p {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Screenshot_2026-02s.jpg" alt="Tigo Logo">
+        <div class="d-flex flex-column">
+          <span class="fw-bold fs-4 text-primary" style="color: var(--tigo-blue) !important;">Tigo Pesa</span>
+          <small class="text-muted fw-bold" style="letter-spacing: 1px;">MKOPOLA</small>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="container">
+      <img src="Screenshot_2026-02s.jpg" alt="Tigo Logo" class="hero-logo">
+      <h1 class="display-3 fw-bold mb-3">Maisha ni Rahisi na Mikopo yetu</h1>
+      <p class="lead mb-5 opacity-90">Pata mkopo wa papo kwa papo kwenye simu yako bila dhamana yoyote.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a class='btn btn-tigo-yellow btn-lg' href='/application_step2'>Omba Sasa</a>
+        <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-4">Angalia Salio la Mkopo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: var(--tigo-blue);">Bidhaa zetu za Mikopo</h2>
+      <p class="text-muted">Chagua mpango unaokufaa kwa maendeleo yako</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card loan-card shadow-sm p-4 text-center">
+          <div class="card-body">
+            <i class="fas fa-money-check-alt card-icon"></i>
+            <h4 class="fw-bold mb-3">Mkopo wa Mshahara</h4>
+            <div class="price-tag">Hadi TZS 2,000,000</div>
+            <p class="text-muted small">Kwa walioajiriwa rasmi. Pata hela ndani ya dakika 5 bila makaratasi.</p>
+            <hr>
+            <ul class="list-unstyled text-start mb-4">
+              <li><i class="fas fa-check-circle me-2 text-primary"></i>Riba Nafuu</li>
+              <li><i class="fas fa-check-circle me-2 text-primary"></i>Hakuna Dhamana</li>
+            </ul>
+            <a class='btn btn-tigo-yellow w-100' href='/application_step2'>Chagua Hii</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card loan-card shadow-sm p-4 text-center">
+          <div class="card-body">
+            <i class="fas fa-store card-icon"></i>
+            <h4 class="fw-bold mb-3">Mkopo wa Biashara</h4>
+            <div class="price-tag">Hadi TZS 2,000,000</div>
+            <p class="text-muted small">Kuza biashara yako leo. Rahisi kulipa na masharti yaliyolegezwa.</p>
+            <hr>
+            <ul class="list-unstyled text-start mb-4">
+              <li><i class="fas fa-check-circle me-2 text-primary"></i>Ushauri wa Biashara</li>
+              <li><i class="fas fa-check-circle me-2 text-primary"></i>Marejesho Rafiki</li>
+            </ul>
+            <a class='btn btn-tigo-yellow w-100' href='/application_step2'>Chagua Hii</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card loan-card shadow-sm p-4 text-center">
+          <div class="card-body">
+            <i class="fas fa-bolt card-icon"></i>
+            <h4 class="fw-bold mb-3">Nivushe / Micro</h4>
+            <div class="price-tag">Hadi TZS 500,000</div>
+            <p class="text-muted small">Kwa dharura ndogo ndogo. Nivushe sasa ulipie baadae kwa urahisi.</p>
+            <hr>
+            <ul class="list-unstyled text-start mb-4">
+              <li><i class="fas fa-check-circle me-2 text-primary"></i>Maamuzi ya Haraka</li>
+              <li><i class="fas fa-check-circle me-2 text-primary"></i>Huduma ya 24/7</li>
+            </ul>
+            <a class='btn btn-tigo-yellow w-100' href='/application_step2'>Chagua Hii</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <img src="Screenshot_2026-02s.jpg" alt="Tigo Logo" style="height: 40px; margin-bottom: 20px;">
+      <p class="mb-2">Tigo Pesa © 2026. Haki zote zimehifadhiwa.</p>
+      <small class="d-block mb-4">Chini ya Udhibiti wa Benki Kuu ya Tanzania (BoT)</small>
+      <div class="d-flex justify-content-center gap-3">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
